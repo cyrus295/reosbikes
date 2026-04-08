@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reos-bikes/static/css/main.7e106a17.css",
+    "main.js": "/reos-bikes/static/js/main.2c8ba0ce.js",
+    "index.html": "/reos-bikes/index.html",
+    "main.7e106a17.css.map": "/reos-bikes/static/css/main.7e106a17.css.map",
+    "main.2c8ba0ce.js.map": "/reos-bikes/static/js/main.2c8ba0ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e106a17.css",
+    "static/js/main.2c8ba0ce.js"
+  ]
+}
