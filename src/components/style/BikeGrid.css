@@ -1,0 +1,108 @@
+/*
+
+/* ===== Center Category / Division Headings ===== */
+.bike-grid-container h2 {
+  font-size: 1.8rem;             /* prominent heading */
+  font-weight: 700;               /* bold */
+  color: #1fff84;                 /* professional dark shade */
+  margin: 2rem 0 1rem;            /* spacing above & below */
+  position: relative;             /* for underline effect */
+  letter-spacing: 0.5px;
+  text-align: center;             /* center text on page */
+}
+
+/* Underline highlight centered under text */
+.bike-grid-container h2::after {
+  content: '';
+  display: block;
+  margin: 0.5rem auto 0;          /* auto margin centers the underline */
+  width: 1300px;                     
+  height: 5px;
+  background-color: #00f69c;       
+  border-radius: 2px;
+}
+
+
+
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 2rem;        /* auto left/right centers the button */
+  padding: 0.5rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #007bff;                /* primary color */
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.view-more-btn:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  transform: translateY(-2px);
+}
+
+.view-more-btn::after {
+  content: '▼';
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.view-more-btn.expanded::after {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  .bike-grid-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .view-more-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+.bike-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .bike-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .bike-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .bike-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.headeh2{
+    font-size: 1.8rem;             /* prominent heading */
+  font-weight: 700;               /* bold */
+  color: #007954;                 /* professional dark shade */
+  margin: 2rem 0 1rem;            /* spacing above & below */
+  position: relative;             /* for underline effect */
+  letter-spacing: 0.5px;
+  text-align: center; 
+}
+
+.headerh2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
