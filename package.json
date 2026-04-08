@@ -2,7 +2,7 @@
   "name": "fd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cyrus295.github.io/reos-bikes",
+  "homepage": "https://cyrus295.github.io/reosbikes",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
