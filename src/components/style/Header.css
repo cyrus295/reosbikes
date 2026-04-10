@@ -1,54 +1,42 @@
-@media (max-width: 768px) {
-  .nav-links {
-    display: none; 
-  }
-}
-
 .header {
-  background-color: #82dbb8;
-  border-bottom: 10px solid var(--border-color);
+  background-color: #CFD6C3;        /* Matte Sage — replaces teal green */
+  border-bottom: 2px solid #CBCBCE; /* Chrome Silver */
   padding: 0.75rem 2rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   position: sticky;
   top: 0;
   z-index: 50;
-  height: 225;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
 
+  height: 70px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 2px 12px rgba(56,62,66,0.12);
+}
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .header-title {
-  font-size: 4.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
-  color: var(--text-primary);
-  letter-spacing: -0.025em;
+  color: #383E42;              /* Gunmetal */
   text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--text-secondary);
-  font-weight: 500;
-  font-size: 0.95rem;
+  letter-spacing: -0.03em;
   transition: color 0.2s ease;
 }
 
-.nav-link:hover {
-  color: var(--accent-color);
+.header-title:hover {
+  color: #C26F2C;              /* Rust Orange on hover */
+}
+
+.header-title span {
+  color: #C26F2C;              /* Rust Orange accent */
 }
 
 .header-right {
@@ -57,37 +45,74 @@
 }
 
 .theme-toggle-btn {
-  background-color: var(--btn-bg);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
+  background-color: #f0ede8;   /* warm off-white */
+  border: 1px solid #CBCBCE;   /* Chrome Silver */
+  color: #383E42;              /* Gunmetal */
   padding: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .theme-toggle-btn:hover {
-  background-color: var(--btn-hover);
+  background-color: #C26F2C;   /* Rust Orange */
+  border-color: #C26F2C;
+  color: #ffffff;
 }
 
 .header-logo-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
 }
 
 .logo-img {
-  height: 40px;
+  height: 42px;
   width: auto;
   object-fit: contain;
+  
 }
 
-/* Responsive tweak */
+/* Dark mode overrides */
+.dark .header {
+  background-color: #272c29;   /* deep matte dark */
+  border-bottom-color: #383E42; /* Gunmetal */
+  box-shadow: 0 2px 12px rgba(0,0,0,0.40);
+}
+
+.dark .header-title {
+  color: #CFD6C3;              /* Matte Sage */
+}
+
+.dark .theme-toggle-btn {
+  background-color: #2e3330;
+  border-color: #383E42;
+  color: #CFD6C3;
+}
+
+.dark .theme-toggle-btn:hover {
+  background-color: #C26F2C;
+  border-color: #C26F2C;
+  color: #ffffff;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .logo-img {
     height: 32px;
+  }
+
+  .header-title {
+    font-size: 1.4rem;
+  }
+
+  .header {
+    padding: 0.75rem 1rem;
   }
 }

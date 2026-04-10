@@ -1,52 +1,50 @@
-/*
-
 /* ===== Center Category / Division Headings ===== */
 .bike-grid-container h2 {
-  font-size: 1.8rem;             /* prominent heading */
-  font-weight: 700;               /* bold */
-  color: #1fff84;                 /* professional dark shade */
-  margin: 2rem 0 1rem;            /* spacing above & below */
-  position: relative;             /* for underline effect */
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #C26F2C;                  /* Rust Orange */
+  margin: 2rem 0 1rem;
+  position: relative;
   letter-spacing: 0.5px;
-  text-align: center;             /* center text on page */
+  text-align: center;
 }
 
 /* Underline highlight centered under text */
 .bike-grid-container h2::after {
   content: '';
   display: block;
-  margin: 0.5rem auto 0;          /* auto margin centers the underline */
-  width: 1300px;                     
+  margin: 0.5rem auto 0;
+  width: 1300px;
   height: 5px;
-  background-color: #00f69c;       
+  background: linear-gradient(90deg, #9B6B55, #C26F2C, #9B6B55); /* Leather → Rust → Leather */
   border-radius: 2px;
 }
 
 
-
+/* ===== View More Button ===== */
 .view-more-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem auto 2rem;        /* auto left/right centers the button */
+  margin: 1rem auto 2rem;
   padding: 0.5rem 1.5rem;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #007bff;                /* primary color */
-  background-color: #fff;
-  border: 2px solid #007bff;
+  color: #C26F2C;                  /* Rust Orange */
+  background-color: #f5ece2;       /* Light rust tint */
+  border: 2px solid #C26F2C;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(194,111,44,0.15);
 }
-
 
 .view-more-btn:hover {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #C26F2C;       /* Rust Orange fill */
+  border-color: #9B6B55;           /* Saddle Leather border */
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(194,111,44,0.35);
 }
 
 .view-more-btn::after {
@@ -71,6 +69,8 @@
   }
 }
 
+
+/* ===== Bike Grid ===== */
 .bike-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -92,17 +92,20 @@
   .bike-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
-.headeh2{
-    font-size: 1.8rem;             /* prominent heading */
-  font-weight: 700;               /* bold */
-  color: #007954;                 /* professional dark shade */
-  margin: 2rem 0 1rem;            /* spacing above & below */
-  position: relative;             /* for underline effect */
+
+/* ===== headeh2 / headerh2 ===== */
+.headeh2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #C26F2C;                  /* Rust Orange */
+  margin: 2rem 0 1rem;
+  position: relative;
   letter-spacing: 0.5px;
-  text-align: center; 
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .headerh2:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  box-shadow: 0 10px 15px -3px rgba(194,111,44,0.20); /* warm rust shadow */
 }

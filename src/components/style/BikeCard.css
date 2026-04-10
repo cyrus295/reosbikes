@@ -1,20 +1,19 @@
 .bike-card {
-  background-color:#a2fdd9;
+  background-color: #CFD6C3;           /* Matte Sage — premium light base */
   border-radius: 0.75rem;
-  /*box-shadow: var(--shadow);*/
-  box-shadow: 0 20px 30px -3px rgb(49, 158, 103);
+  box-shadow: 0 26px 30px -3px rgba(56, 62, 66, 0.35); /* Gunmetal depth shadow */
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease, box-shadow 0.2s ease;
   cursor: default;
-  border: 1px solid var(--border-color);
+  border: 1px solid #CBCBCE;           /* Chrome Silver border */
 }
 
 .bike-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px -10px rgb(49, 158, 103);
+  box-shadow: 0 10px 15px -10px rgba(194, 111, 44, 0.55); /* Rust Orange glow on hover */
 }
 
 .bike-image {
@@ -22,21 +21,44 @@
   height: 12rem;
   object-fit: cover;
   border-radius: 0.5rem;
-  background-color: var(--btn-bg);
+  background-color: #e5ddd3;           /* warm leather-toned fallback */
 }
 
 .bike-model {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #383E42;                      /* Gunmetal text */
   margin-top: 1rem;
   text-align: center;
 }
 
 .bike-version {
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: #919D7E;                      /* Olive Drab muted label */
   margin-top: 0.25rem;
   text-align: center;
   font-weight: 500;
+}
+
+/* ── Dark mode overrides ── */
+.dark .bike-card {
+  background-color: #2e3330;           /* deep matte card surface */
+  box-shadow: 0 26px 30px -3px rgba(0, 0, 0, 0.50);
+  border-color: #383E42;               /* Gunmetal border */
+}
+
+.dark .bike-card:hover {
+  box-shadow: 0 10px 15px -10px rgba(194, 111, 44, 0.50);
+}
+
+.dark .bike-image {
+  background-color: #383E42;           /* Gunmetal image fallback */
+}
+
+.dark .bike-model {
+  color: #CFD6C3;                      /* Matte Sage text */
+}
+
+.dark .bike-version {
+  color: #919D7E;                      /* Olive Drab stays consistent */
 }

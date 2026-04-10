@@ -1,5 +1,6 @@
 import React from 'react'
 import './style/Header.css'
+import logo from '../assets/logo.png';
 import { Sun, Moon } from 'lucide-react'
 
 function Header({ isDark, toggleTheme }) {
@@ -7,11 +8,7 @@ function Header({ isDark, toggleTheme }) {
     <header className="header">
       <div className="header-left">
         <div className="header-logo-icon">
-          <img 
-            src="/logo.png" 
-            alt="REOs Bikes Logo" 
-            className="logo-img"
-          />
+          <img src={logo} className='logo-img'/>
         </div>
 
         <a href="/" className="header-title">
